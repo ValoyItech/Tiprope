@@ -1,0 +1,771 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.logo {
+    height: 50px;
+}
+
+.registration-info {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.menu-icon {
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20% auto;
+    text-align: center;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.gallery-container img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+}
+.registration-info {
+    text-align: left;
+    font-family: Arial, sans-serif;
+    margin-left: 20px; /* Adjust as needed */
+}
+
+.company-name {
+    font-size: 1.8em; /* Larger than the rest */
+    font-weight: bold;
+}
+
+.registration-info p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+@media (max-width: 768px) {  
+    .registration-info {
+        margin-left: 10px; /* Reduce left margin for smaller screens */
+    }
+
+    .company-name {
+        font-size: 1.5em; /* Slightly smaller for mobile */
+    }
+
+    .registration-info p {
+        font-size: 0.9em; /* Adjust text size */
+    }
+}
+@media (max-width: 768px) {  
+    .registration-info {
+        margin-left: 10px; /* Reduce left margin for smaller screens */
+    }
+
+    .company-name {
+        font-size: 0.80em; /* Smaller font size for mobile */
+    }
+
+    .registration-info p {
+        font-size: 0.60em; /* Reduce text size */
+        line-height: 1.2; /* Reduce line spacing */
+        margin: 3px 0; /* Reduce space between lines */
+    }
+}
+/* For Desktop and Large Screens */
+@media screen and (min-width: 769px) {
+    nav {
+        display: block; /* Show the navigation by default on larger screens */
+        position: static; /* Remove the fixed position */
+        background: transparent; /* Make the background transparent */
+    }
+
+    nav ul {
+        display: flex; /* Align the menu items horizontally */
+        justify-content: center; /* Center the menu items */
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0 15px; /* Add spacing between menu items */
+    }
+
+    .menu-icon {
+        display: none; /* Hide the menu icon on large screens */
+    }
+}
+
+/* For Mobile Screens */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show the menu icon on mobile */
+    }
+
+    nav {
+        display: none; /* Hide the menu by default */
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 20% auto;
+        text-align: center;
+    }
+}
+/* For Desktop and Large Screens */
+@media screen and (min-width: 769px) {
+    nav {
+        display: block;
+        position: static;
+        background: transparent;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: white; /* Set the text color to white for better visibility */
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+}
+/* For Desktop and Large Screens */
+@media screen and (min-width: 769px) {
+    nav#desktop-menu {
+        display: block;
+        position: static;
+        background: transparent;
+    }
+
+    nav#desktop-menu ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    nav#desktop-menu ul li {
+        margin: 0 15px;
+    }
+
+    nav#desktop-menu ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .menu-icon {
+        display: none; /* Hide the menu icon on large screens */
+    }
+}
+
+/* For Mobile Screens */
+@media screen and (max-width: 768px) {
+    nav#desktop-menu {
+        display: none; /* Hide desktop menu */
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav#mobile-menu {
+        display: none; /* Initially hide the mobile menu */
+    }
+
+    nav#mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 20% auto;
+        text-align: center;
+    }
+
+    nav#mobile-menu ul li a {
+        color: white; /* Ensure menu text is white */
+        text-decoration: none;
+        font-size: 24px;
+    }
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+@media screen and (min-width: 769px) {
+    nav#desktop-menu {
+        display: flex; /* Ensure visibility */
+        position: static;
+        background: transparent;
+        justify-content: center; /* Center menu */
+    }
+
+    nav#desktop-menu ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav#desktop-menu ul li {
+        margin: 0 15px;
+        list-style: none;
+    }
+
+    nav#desktop-menu ul li a {
+        color: white; /* Ensure visibility */
+        text-decoration: none;
+        font-size: 18px;
+    }
+}
+nav#desktop-menu {
+    position: absolute;
+    top: 100px; /* Adjust this to match your header height */
+    left: 0;
+    width: 100%;
+    background: #333; /* Ensure visibility */
+    z-index: 1000; /* Keep it on top */
+}
+nav#desktop-menu {
+    position: absolute;
+    top: 50%; /* Aligns with the middle of the header */
+    right: 20px; /* Moves it to the far right */
+    transform: translateY(-50%); /* Centers it vertically */
+    background: transparent; /* Removes unnecessary background */
+}
+
+nav#desktop-menu ul {
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right */
+    margin: 0;
+}
+
+nav#desktop-menu ul li {
+    margin: 0 15px;
+}
+
+nav#desktop-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative; /* Ensures proper positioning of child elements */
+}
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slideshow-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots Navigation */
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #333;
+}
+/* Make slideshow container fit mobile screens */
+  .slideshow-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .slideshow-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+  }
+
+  /* Make form inputs full-width */
+  .quotation-form input,
+  .quotation-form textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+   .slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    aspect-ratio: 16 / 9; /* Default landscape mode */
+    margin: auto;
+    overflow: hidden;
+    background-color: black; /* Prevents gaps */
+}
+
+.slideshow-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.slide img {
+    width: auto;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Ensures full image visibility */
+}
+
+/* Responsive: Switch to portrait for small screens */
+@media (max-width: 768px) {
+    .slideshow-container {
+        aspect-ratio: 9 / 16; /* Portrait mode for mobile */
+    }
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dots Navigation */
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #333;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative; /* Ensure it's positioned for absolute child elements */
+}
+
+nav#desktop-menu {
+    position: absolute;
+    bottom: 10px; /* Adjust the distance from the bottom of the header */
+    right: 20px; /* Moves the menu to the far right */
+    background: transparent; /* Removes unnecessary background */
+    z-index: 1000; /* Keeps the menu on top */
+}
+
+nav#desktop-menu ul {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    margin: 0;
+}
+
+nav#desktop-menu ul li {
+    margin: 0 15px;
+}
+
+nav#desktop-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+/* Ensure header positioning is correct */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative; /* Make sure child elements can be positioned relative to the header */
+}
+
+/* Updated styling for the desktop menu to position it at the bottom-right */
+nav#desktop-menu {
+    position: absolute;
+    bottom: 10px; /* Distance from the bottom of the header */
+    right: 20px; /* Distance from the right edge of the header */
+    background: transparent; /* Ensures the menu has no background */
+}
+
+nav#desktop-menu ul {
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right */
+    margin: 0;
+    padding: 0;
+}
+
+nav#desktop-menu ul li {
+    margin: 0 15px; /* Spacing between menu items */
+}
+
+nav#desktop-menu ul li a {
+    color: white; /* Menu item color */
+    text-decoration: none; /* Removes underlines from links */
+    font-size: 18px;
+}
+@media screen and (min-width: 769px) {
+    nav#desktop-menu {
+        display: block; /* Ensure it’s visible on larger screens */
+    }
+}
+.logo {
+    width: 100px;  /* Adjust this value */
+    height: 100px; /* Same as width for a perfect square */
+    object-fit: cover; /* Ensures it fills the square */
+}
+.name-address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8f8; /* Adjust as needed */
+    border-bottom: 2px solid #ddd;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.address, .email, .phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.name-image img {
+    width: 120px; /* Adjust the size */
+    height: auto;
+}
+.name-address {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 20px;
+    background-color: #f8f8f8; /* Adjust as needed */
+    border-bottom: 2px solid #ddd;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.address, .email, .phone {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.icon {
+    width: 18px; /* Adjust icon size */
+    height: 18px;
+    margin-top: 5px; /* Align icons with text */
+}
+
+.text {
+    font-size: 10px; /* Adjust font size */
+    line-height: 0.3; /* Adjust line spacing */
+    text-align: left;
+}
+
+.name-image img {
+    width: 200px; /* Adjust image size */
+    height: auto;
+}
+/* General Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Header Animation */
+header {
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Logo Animation */
+.logo {
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+/* Menu Icon Animation */
+.menu-icon {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+/* Navigation Animation */
+nav {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Section Titles */
+h2, h3 {
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Paragraph Text */
+p {
+    animation: fadeInUp 1.4s ease-in-out;
+}
+
+/* Name and Address Section */
+.name-address {
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Contact Information */
+.contact-info {
+    animation: fadeInLeft 1.6s ease-in-out;
+}
+
+/* Name Image */
+.name-image img {
+    animation: fadeInRight 1.6s ease-in-out;
+}
+
+/* Gallery Images (Staggered) */
+.slideshow-track .slide:nth-child(odd) img {
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.slideshow-track .slide:nth-child(even) img {
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+/* Footer Animation */
+footer {
+    animation: fadeInUp 1.8s ease-in-out;
+}
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 80vh; /* Adjust height based on your layout */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Prevents blank spaces */
+}
+
+.slideshow-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures images fit without distortion */
+}
+.slide img {
+    width: auto;
+    height: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Changed from black to white */
+}

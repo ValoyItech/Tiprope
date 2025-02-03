@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiprope Consultant & Construction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="Images/Logo.jpg" alt="Company Logo" class="logo">
+        <div class="registration-info">
+    <p>Reg No: 2016/408345/07</p>
+    <p>VAT No: 4340290651</p>
+    <p>PO Box 2534</p>
+    <p>Ermelo, 2351</p>
+</div>
+ <img src="Images/menu.png" alt="Menu Icon" class="menu-icon" onclick="toggleMenu()">
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav id="desktop-menu">
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Navigation Menu (Initially hidden) -->
+    <nav id="mobile-menu" style="display:none;">
+        <ul>
+            <li><a href="#about" onclick="toggleMenu()">About Us</a></li>
+            <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+            <li><a href="#gallery" onclick="toggleMenu()">Gallery</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="name-address">
+    <div class="contact-info">
+        <div class="address">
+            <img src="Images/Address.png" alt="Address Icon" class="icon">
+            <div class="text">
+                <p>PO Box 2534</p>
+                <p>Ermelo</p>
+                <p>2351</p>
+            </div>
+        </div>
+        <div class="email">
+            <img src="Images/Email.png" alt="Email Icon" class="icon">
+            <p class="text">tsmashava@gmail.com</p>
+        </div>
+        <div class="phone">
+            <img src="Images/Call.png" alt="Call Icon" class="icon">
+            <p class="text">079 875 6408</p>
+        </div>
+    </div>
+    <div class="name-image">
+        <img src="Images/Name.jpg" alt="Name Image">
+    </div>
+</section>
+    
+    <section id="about-us">
+    <div class="container">
+        <h2>About Us</h2>
+        
+        <p>Tiprope Consultant & Construction is a leading civil engineering firm with over 20 years of experience in executing high-profile projects for RME Transnet Capital Projects. We specialize in a wide range of services, including project estimations, construction management and planning, quality control and assurance, budget management, safety and risk management, as well as the procurement and supply of materials and products.</p>
+
+        <p>Our vast expertise is underpinned by a commitment to delivering exceptional service while fostering sustainable growth and development. We take pride in our long-standing relationships with clients and partners, helping to drive progress across industries while promoting economic empowerment within local communities.</p>
+
+        <h3>Our Vision</h3>
+        <p>Our vision is to ensure better service delivery within the industrial landscape, initiate modern development concepts in underprivileged communities, and create a new model for architectural and infrastructural design, embodying what we term the "new African city." Through this, we strive to reshape the future and build an environment that reflects African ingenuity and pride.</p>
+
+        <h3>Our Mission</h3>
+        <p>We are dedicated to contributing to South Africa’s GDP through job creation, focusing on developing industrial landscapes without harming the ecosystem. We aim to establish a self-sustaining blueprint through industrial means, benefiting communities and maximizing their economic potential. Our goal is to foster growth, creating a positive impact on the socio-economic fabric of the nation.</p>
+    </div>
+</section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We offer a comprehensive range of services including project estimations, construction management and planning, quality control/assurance, managing of budgets, safety, risk and environment management, as well as the procurement and supply of materials and products. Our goal is to provide end-to-end solutions that ensure successful project delivery and long-term sustainability. Watch us at work below...</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Our Work</h2>
+        <div class="slideshow-container">
+        <button id="prev" class="prev">&#10094;</button>
+        <div class="slideshow-track">
+          <div class="slide"><img src="Images/W1.jpg" alt="Project 1"></div>
+          <div class="slide"><img src="Images/W2.jpg" alt="Project 2"></div>
+          <div class="slide"><img src="Images/W3.jpg" alt="Project 3"></div>
+          <div class="slide"><img src="Images/W4.jpg" alt="Project 4"></div>
+          <div class="slide"><img src="Images/W5.jpg" alt="Project 5"></div>
+          <div class="slide"><img src="Images/W6.jpg" alt="Project 6"></div>
+          <div class="slide"><img src="Images/W7.jpg" alt="Project 7"></div>
+          <div class="slide"><img src="Images/W8.jpg" alt="Project 8"></div>
+          <div class="slide"><img src="Images/W9.jpg" alt="Project 9"></div>
+          <div class="slide"><img src="Images/W10.jpg" alt="Project 10"></div>
+          <div class="slide"><img src="Images/W11.jpg" alt="Project 11"></div>
+          <div class="slide"><img src="Images/W12.jpg" alt="Project 12"></div>
+          <div class="slide"><img src="Images/W13.jpg" alt="Project 13"></div>
+          <div class="slide"><img src="Images/W14.jpg" alt="Project 14"></div>
+          <div class="slide"><img src="Images/W15.jpg" alt="Project 15"></div>
+          <div class="slide"><img src="Images/W16.jpg" alt="Project 16"></div>
+          <div class="slide"><img src="Images/W17.jpg" alt="Project 17"></div>
+          <div class="slide"><img src="Images/W18.jpg" alt="Project 18"></div>
+          <div class="slide"><img src="Images/W19.jpg" alt="Project 19"></div>
+          <div class="slide"><img src="Images/W20.jpg" alt="Project 20"></div>
+        </div>
+        <button id="next" class="next">&#10095;</button>
+      </div>
+
+      <div class="dots">
+        <span class="dot active" onclick="jumpToSlide(0)"></span>
+        <span class="dot" onclick="jumpToSlide(1)"></span>
+        <span class="dot" onclick="jumpToSlide(2)"></span>
+        <span class="dot" onclick="jumpToSlide(3)"></span>
+        <span class="dot" onclick="jumpToSlide(4)"></span>
+        <span class="dot" onclick="jumpToSlide(5)"></span>
+        <span class="dot" onclick="jumpToSlide(6)"></span>
+        <span class="dot" onclick="jumpToSlide(7)"></span>
+        <span class="dot" onclick="jumpToSlide(8)"></span>
+        <span class="dot" onclick="jumpToSlide(9)"></span>
+        <span class="dot" onclick="jumpToSlide(10)"></span>
+        <span class="dot" onclick="jumpToSlide(11)"></span>
+        <span class="dot" onclick="jumpToSlide(12)"></span>
+        <span class="dot" onclick="jumpToSlide(13)"></span>
+        <span class="dot" onclick="jumpToSlide(14)"></span>
+        <span class="dot" onclick="jumpToSlide(15)"></span>
+        <span class="dot" onclick="jumpToSlide(16)"></span>
+        <span class="dot" onclick="jumpToSlide(17)"></span>
+        <span class="dot" onclick="jumpToSlide(18)"></span>
+        <span class="dot" onclick="jumpToSlide(19)"></span>
+      </div>
+    </section>
+    <section id="others">
+        <h3>Environmental Concern</h3>
+        <p>At Tiprope Consultant & Construction, we believe that the Earth, much like a mother, provides essential sustenance to human life. As a female-managed company, we are deeply connected to the planet and its challenges. We value the Earth-to-human relationship and are committed to working with manufacturers and organizations that share our passion for the environment. We recognize the importance of maintaining sustainable practices and strive to offer greener solutions in the development of the industrial landscape. We take every step possible to ensure that our work aligns with the preservation of our planet for future generations.</p>
+
+        <h3>Social and Community Investment</h3>
+        <p>Our commitment to social investment is at the heart of everything we do. We create job opportunities for local community members, prioritizing them for employment in our projects. Furthermore, we understand the importance of supporting the sustainability of communities. That’s why we assist in the establishment of community-based initiatives and contribute to programs such as food parcel distributions to those in need.</p>
+
+        <h3>Competitive Advantage</h3>
+        <p>Tiprope Consultant & Construction is proudly managed by young black women and is wholly owned by Mpumalanga-based entrepreneurs. Our directors are well-respected members of the community, with influential leadership skills in both business and social sectors. As a learning and growth-oriented organization, we have built a strong network of industry relationships and have secured key contracts across South Africa, ensuring our place as leaders in the civil engineering sector.</p>
+    </section>
+
+    <footer>
+        <p>2025 Tiprope | Designed by <a href="https://valoyitech.github.io/Website-Project/Index.html" target="_blank">Hector Baloyi</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
