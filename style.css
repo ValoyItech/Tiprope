@@ -545,4 +545,49 @@ header {
     width: 100%; /* Makes the image responsive */
     height: 100%; /* Matches the height of the text */
     object-fit: cover; /* Prevents distortion */
+}
+
+.content-container {
+    display: flex;
+    align-items: stretch; /* Makes both text and image the same height */
+    gap: 20px;
+}
+
+.text {
+    flex: 1; /* Takes up available space */
+    text-align: justify; /* Justifies text */
+}
+
+.image {
+    flex: 1; /* Ensures the image takes equal space */
+    display: flex;
+    align-items: center; /* Centers image vertically */
+}
+
+footer {
+    background-color: #222; /* Dark background */
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #f4a261; /* Highlight color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
     }
