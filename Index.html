@@ -118,28 +118,54 @@
         <section id="contact-us">
             <div class="container">
                 <div class="contact-left">
-                    <h2>Contact Us</h2>
-                    <p>
-                        <img src="Images/Address.png" alt="Address Icon"> PO Box 2534, Emelo, 2350
-                    </p>
-                    <p>
-                        <img src="Images/Email.png" alt="Email Icon"> tsmashava@gmail.com
-                    </p>
-                    <p>
-                        <img src="Images/Call.png" alt="Call Icon"> 079 875 6408
-                    </p>
-                    
-                </div>
+    <h2>Contact Us</h2>
+    <p>
+        <img src="Images/Address.png" alt="Address Icon"> PO Box 2534, Emelo, 2350
+    </p>
+    <p>
+        <img src="Images/Email.png" alt="Email Icon"> tsmashava@gmail.com
+    </p>
+    <p>
+        <img src="Images/Call.png" alt="Call Icon"> 079 875 6408
+    </p>
+    
+    <!-- Add this registration info section -->
+    <div class="registration-info">
+        <h3>Company Registration</h3>
+        <dl>
+            <dt><img src="Images/Registration.png" alt="Registration Icon"> Registration Number:</dt>
+            <dd>2016/408345/07</dd>
+            
+            <dt><img src="Images/VAT.png" alt="VAT Icon"> VAT Number:</dt>
+            <dd>4340290651</dd>
+            
+            <dt><img src="Images/Industry.png" alt="Industry Icon"> Industry:</dt>
+            <dd>Construction & Civil Engineering</dd>
+        </dl>
+    </div>
+</div>
         
                 <div class="contact-right">
                     <h2>Send Us a Message</h2>
-                    <form action="submit_form.php" method="POST">
-                        <input type="text" name="full_name" placeholder="Full Name" required>
-                        <input type="tel" name="phone" placeholder="Phone Number" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
+                    <form action="mailto:ts.mashava@gmail.com" method="post" enctype="text/plain">
+    <div class="form-group">
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required>
+    </div>
+    <div class="form-group">
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required>
+    </div>
+    <div class="form-group">
+        <label for="email_address">Email Address:</label>
+        <input type="email" id="email_address" name="email_address" required>
+    </div>
+    <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+</form>
                 </div>
             </div>
         </section>
