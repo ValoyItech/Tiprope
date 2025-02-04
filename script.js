@@ -32,3 +32,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // Change image every 3 seconds
     setInterval(showNextSlide, 3000);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    let lastScrollY = window.scrollY;
+    let header = document.querySelector("header");
+
+    function handleScroll() {
+        if (window.scrollY > lastScrollY) {
+            // Scrolling down, hide header
+            header.style.transform = "translateY(-100%)";
+        } else if (window.scrollY === 0) {
+            // Scrolled to top, show header
+            header.style.transform = "translateY(0)";
+        }
+        lastScrollY = window.scrollY;
+    }
+
+    window.addEventListener("scroll", handleScroll);
+});
