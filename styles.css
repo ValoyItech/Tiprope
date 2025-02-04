@@ -769,3 +769,32 @@ footer {
     align-items: center;
     background-color: white; /* Changed from black to white */
 }
+/* Updated Desktop Menu Positioning - Bottom Right */
+@media screen and (min-width: 769px) {
+    nav#desktop-menu {
+        position: absolute;
+        bottom: 10px; /* Distance from bottom of header */
+        right: 20px; /* Distance from right edge */
+        background: transparent;
+        z-index: 1000;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav#desktop-menu ul {
+        display: flex;
+        justify-content: flex-end; /* Align items to the right */
+        margin: 0;
+        padding: 0;
+    }
+
+    nav#desktop-menu ul li {
+        margin: 0 0 0 25px; /* Left margin between items only */
+    }
+
+    nav#desktop-menu ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+}
